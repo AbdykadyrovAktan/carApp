@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="554.0" prefWidth="899.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="kg.mega.carapp.controllers.MainController">
+   <top>
+      <MenuBar BorderPane.alignment="CENTER">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Close" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Edit">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#onCreate" text="Create" />
+                  <MenuItem mnemonicParsing="false" onAction="#onUpdate" text="Update" />
+                  <MenuItem mnemonicParsing="false" onAction="#onDelete" text="Delete" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+   </top>
+   <center>
+      <TableView fx:id="tbCars" prefHeight="546.0" prefWidth="899.0" BorderPane.alignment="CENTER">
+        <columns>
+            <TableColumn fx:id="colmId" prefWidth="50.0" style="-fx-alignment: center;" text="Id" />
+          <TableColumn fx:id="colmBrand" prefWidth="95.0" style="-fx-alignment: center;" text="Brand" />
+          <TableColumn fx:id="colmModel" prefWidth="95.0" style="-fx-alignment: center;" text="Model" />
+            <TableColumn fx:id="colmModelYear" prefWidth="90.0" style="-fx-alignment: center;" text="Model year" />
+            <TableColumn fx:id="colmCarBodyStyle" prefWidth="100.0" style="-fx-alignment: center;" text="Car body style" />
+            <TableColumn fx:id="colmPrice" prefWidth="95.0" style="-fx-alignment: center;" text="Price (USD)" />
+            <TableColumn fx:id="colmIsCleared" prefWidth="55.0" style="-fx-alignment: center;" text="Cleared" />
+            <TableColumn fx:id="colmMileage" prefWidth="100.0" style="-fx-alignment: center;" text="Mileage (km)" />
+            <TableColumn fx:id="colmColor" prefWidth="100.0" style="-fx-alignment: center;" text="Color" />
+            <TableColumn fx:id="colmEngine" prefWidth="63.0" style="-fx-alignment: center;" text="Engine" />
+        </columns>
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
+      </TableView>
+   </center>
+</BorderPane>
